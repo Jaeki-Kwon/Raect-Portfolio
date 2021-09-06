@@ -9,7 +9,7 @@ const Article = styled.article`
   background-color: #f9c51d;
 `;
 
-const SkillContent = styled.div`
+const SkillForm = styled.div`
   max-width: 71.25rem;
   padding: 4rem 2rem;
   width: 70%;
@@ -68,7 +68,7 @@ const SkillImg = styled.div`
 function Skill() {
   return (
     <Article>
-      <SkillContent>
+      <SkillForm>
         <TitleContainer>
           <TitleIcon>
             <i className="fas fa-paperclip" style={{ fontSize: "35px" }}></i>
@@ -90,7 +90,7 @@ function Skill() {
                 src="https://blog.kakaocdn.net/dn/bciYZs/btqIhYFjzOp/T30xCSojKbI33usZVjw9Ek/img.jpg"
               />
               <img
-                style={{ width: "100%", height: "170px" }}
+                style={{ width: "100%", height: "170px", marginTop: "70px" }}
                 className="skillImg"
                 alt="skill_02"
                 src="https://media.vlpt.us/images/hanjiyeon/post/579dd2df-3231-4e55-a8ea-2f8b9e56c0d2/1B5EE4D5D773F8A-RR.jpg"
@@ -113,6 +113,12 @@ function Skill() {
                 className="skillImg"
                 alt="skill_04"
                 src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmOAod%2FbtqBJeuznU9%2Fu8tp7X3Rse47AqwFXPmSc1%2Fimg.png"
+              />
+              <img
+                style={{ width: "100%", height: "180px" }}
+                className="skillImg"
+                alt="skill_04"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6oEP7_kZbS8Q9iq2Ooo2B5NAMNPblkZqnWw&usqp=CAU"
               />
             </SkillImg>
           </Skills>
@@ -143,7 +149,7 @@ function Skill() {
             </SkillImg>
           </Skills>
         </SkillContainer>
-      </SkillContent>
+      </SkillForm>
     </Article>
   );
 }

@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Last = styled.footer`
-  height: 15vh;
+  height: 13vh;
   background-color: #222222;
   color: white;
   text-align: center;

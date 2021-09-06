@@ -72,10 +72,18 @@ function Nav() {
 
   const handleSkill = () => {
     window.scrollTo({
-      top: 1500,
+      top: 1800,
       behavior: "smooth",
     });
-    setScrollY(1500);
+    setScrollY(1800);
+  };
+
+  const handleProject = () => {
+    window.scrollTo({
+      top: 3200,
+      behavior: "smooth",
+    });
+    setScrollY(3200);
   };
 
   return (
@@ -88,7 +96,7 @@ function Nav() {
           <Item onClick={handleHome}>Home</Item>
           <Item onClick={handleAbout}>About</Item>
           <Item onClick={handleSkill}>Skill</Item>
-          <Item>Project</Item>
+          <Item onClick={handleProject}>Project</Item>
         </RightMenu>
       </MenuContainer>
     </Menu>

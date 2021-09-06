@@ -7,7 +7,7 @@ const Article = styled.article`
   justify-content: center;
   align-items: center;
 `;
-const AboutContent = styled.div`
+const AboutForm = styled.div`
   max-width: 71.25rem;
   padding: 4rem 2rem;
   width: 70%;
@@ -59,7 +59,7 @@ const AboutField = styled.div``;
 const About = () => {
   return (
     <Article>
-      <AboutContent>
+      <AboutForm>
         <TitleContainer>
           <TitleIcon>
             <i className="fas fa-paperclip" style={{ fontSize: "35px" }}></i>
@@ -145,7 +145,7 @@ const About = () => {
             </AboutInfo>
           </AboutInfoWrap>
         </AboutContainer>
-      </AboutContent>
+      </AboutForm>
     </Article>
   );
 };
