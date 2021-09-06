@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import Modal from "react-modal";
+
+import TodayMongo from "../Modal/TodayMongo";
+
 import todayILearnedMariaDB from "./img/today_i_learned.png";
 import todayILearnedMongo from "./img/todayMongo.png";
 import movieApp from "./img/movieApp.png";
@@ -75,7 +79,26 @@ const ProjectsContent = styled.div`
   text-align: center;
 `;
 
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+
+Modal.setAppElement("#root");
+
 function Project() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
   return (
     <Article>
       <ProjectForm>
@@ -93,7 +116,7 @@ function Project() {
           </Title>
         </TitleContainer>
         <ProjectContainer>
-          <Projects>
+          <Projects style={{ cursor: "pointer" }} onClick={TodayMongo}>
             <ProjectsTitle>
               <h1>Today I Learned</h1>
             </ProjectsTitle>
@@ -108,7 +131,7 @@ function Project() {
               <h2>React와 Node JS 그리고 MongoDB를 사용하여 게시판을 만듬.</h2>
             </ProjectsContent>
           </Projects>
-          <Projects>
+          <Projects style={{ cursor: "pointer" }}>
             <ProjectsTitle>
               <h1>Today I Learned</h1>
             </ProjectsTitle>
@@ -127,7 +150,7 @@ function Project() {
               <h2>paging기능을 추가함.</h2>
             </ProjectsContent>
           </Projects>
-          <Projects>
+          <Projects style={{ cursor: "pointer" }}>
             <ProjectsTitle>
               <h1>Movie App</h1>
             </ProjectsTitle>
@@ -145,7 +168,7 @@ function Project() {
               </h2>
             </ProjectsContent>
           </Projects>
-          <Projects>
+          <Projects style={{ cursor: "pointer" }}>
             <ProjectsTitle>
               <h1>Carrot Game</h1>
             </ProjectsTitle>
@@ -160,7 +183,7 @@ function Project() {
               <h2>HTML, CSS, JavaScript를 사용하여 간단한 게임 구현.</h2>
             </ProjectsContent>
           </Projects>
-          <Projects>
+          <Projects style={{ cursor: "pointer" }}>
             <ProjectsTitle>
               <h1>Nomflix</h1>
             </ProjectsTitle>
@@ -178,7 +201,7 @@ function Project() {
               </h2>
             </ProjectsContent>
           </Projects>
-          <Projects>
+          <Projects style={{ cursor: "pointer" }}>
             <ProjectsTitle>
               <h1>WeTube</h1>
             </ProjectsTitle>
@@ -196,7 +219,7 @@ function Project() {
               </h2>
             </ProjectsContent>
           </Projects>
-          <Projects>
+          <Projects style={{ cursor: "pointer" }}>
             <ProjectsTitle>
               <h1>JS-Chrome</h1>
             </ProjectsTitle>
@@ -214,7 +237,7 @@ function Project() {
               </h2>
             </ProjectsContent>
           </Projects>
-          <Projects>
+          <Projects style={{ cursor: "pointer" }}>
             <ProjectsTitle>
               <h1>Shopping Mall List</h1>
             </ProjectsTitle>
@@ -232,7 +255,7 @@ function Project() {
               </h2>
             </ProjectsContent>
           </Projects>
-          <Projects>
+          <Projects style={{ cursor: "pointer" }} onClick={openModal}>
             <ProjectsTitle>
               <h1>카카오톡</h1>
             </ProjectsTitle>
@@ -252,6 +275,11 @@ function Project() {
           </Projects>
         </ProjectContainer>
       </ProjectForm>
+      <div>
+        <Modal isOpen={modalIsOpen} style={customStyles}>
+          <TodayMongo setIsOpen={setIsOpen} />
+        </Modal>
+      </div>
     </Article>
   );
 }
