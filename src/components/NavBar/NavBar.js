@@ -65,26 +65,26 @@ function Nav() {
 
   const handleAbout = () => {
     window.scrollTo({
-      top: 900,
+      top: 750,
       behavior: "smooth",
     });
-    setScrollY(900);
+    setScrollY(750);
   };
 
   const handleSkill = () => {
     window.scrollTo({
-      top: 1800,
+      top: 1500,
       behavior: "smooth",
     });
-    setScrollY(1800);
+    setScrollY(1500);
   };
 
   const handleProject = () => {
     window.scrollTo({
-      top: 4000,
+      top: 3700,
       behavior: "smooth",
     });
-    setScrollY(4000);
+    setScrollY(3700);
   };
 
   return (
