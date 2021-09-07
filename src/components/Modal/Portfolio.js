@@ -46,7 +46,7 @@ function Portfolio({ setPortfolioModal }) {
               </li>
               <li>맨 밑에 깃허브 이모티콘 클릭하면 내 깃허브 주소로 이동.</li>
               <li>
-                <a href="https://jaeki-kwon.github.io/Js-paintjs/">여기서</a>{" "}
+                <a href="https://jaekiportfolio.herokuapp.com/">여기서</a>{" "}
                 확인하기
               </li>
             </p>
