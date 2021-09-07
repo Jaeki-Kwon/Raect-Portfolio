@@ -1,19 +1,17 @@
 import React from "react";
 import "../Modal/Modal.css";
-import image1 from "./img/Maria/Maria1.png";
-import image2 from "./img/Maria/Maria2.png";
-import image3 from "./img/Maria/Maria3.png";
-import image4 from "./img/Maria/Maria4.png";
-import image5 from "./img/Maria/Maria5.png";
-import image6 from "./img/Maria/Maria6.png";
-import image7 from "./img/Maria/Maria7.png";
+import image1 from "./img/Portfolio/Portfolio1.png";
+import image2 from "./img/Portfolio/Portfolio2.png";
+import image3 from "./img/Portfolio/Portfolio3.png";
+import image4 from "./img/Portfolio/Portfolio4.png";
+import image5 from "./img/Portfolio/Portfolio5.png";
 
-function TodayMaria({ setMaria }) {
+function Portfolio({ setPortfolioModal }) {
   const closeModal = () => {
-    setMaria(false);
+    setPortfolioModal(false);
   };
 
-  const data = [image1, image2, image3, image4, image5, image6, image7];
+  const data = [image1, image2, image3, image4, image5];
 
   return (
     <div className="Modal">
@@ -39,18 +37,18 @@ function TodayMaria({ setMaria }) {
           </div>
           <div className="Modal_Inner-Detail">
             <p>
-              <li>MongoDB로 프로젝트 만들었을 때와 똑같다.</li>
-              <li>추가적으로 Paging기능과 시간을 현재시각으로 바꾸었다.</li>
+              <li>지금까지 공부한 것을 기반으로 포트폴리오를 제작.</li>
               <li>
-                <a
-                  href="https://today-i-learned1.herokuapp.com/"
-                  target="blank"
-                >
-                  여기서
-                </a>{" "}
+                상단에 Home, About, Skill, Project를 클릭하면 그 위치로 이동.
+              </li>
+              <li>
+                프로젝트들을 클릭하면 Modal창을 만들어 세부내용하는 것을 만듬.
+              </li>
+              <li>맨 밑에 깃허브 이모티콘 클릭하면 내 깃허브 주소로 이동.</li>
+              <li>
+                <a href="https://jaeki-kwon.github.io/Js-paintjs/">여기서</a>{" "}
                 확인하기
               </li>
-              <li>Heroku를 사용하여 배포하였음.</li>
             </p>
           </div>
         </div>
@@ -59,4 +57,4 @@ function TodayMaria({ setMaria }) {
   );
 }
 
-export default TodayMaria;
+export default Portfolio;

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./NavBar.css";
 
@@ -26,7 +25,9 @@ const MenuLogo = styled.div`
 
 const Logo = styled.div`
   display: inline-block;
-  font-size: 20px;
+  color: #52bcff;
+  font-size: 22px;
+  font-weight: bold;
   padding: 19px 20px;
 `;
 
@@ -80,16 +81,16 @@ function Nav() {
 
   const handleProject = () => {
     window.scrollTo({
-      top: 3200,
+      top: 4000,
       behavior: "smooth",
     });
-    setScrollY(3200);
+    setScrollY(4000);
   };
 
   return (
     <Menu>
       <MenuLogo>
-        <Logo onClick={handleHome}>Logo</Logo>
+        <Logo onClick={handleHome}>포트폴리오</Logo>
       </MenuLogo>
       <MenuContainer>
         <RightMenu>

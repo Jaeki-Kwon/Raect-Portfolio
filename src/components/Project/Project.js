@@ -1,15 +1,28 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Modal from "react-modal";
+import "../Modal/Modal.css";
 
+import Portfolio from "../Modal/Portfolio";
 import TodayMongo from "../Modal/TodayMongo";
+import TodayMaria from "../Modal/TodayMaria";
+import MovieApp from "../Modal/MovieApp";
+import CarrotGame from "../Modal/CarrotGame";
+import Nomflix from "../Modal/Nomflix";
+import Wetube from "../Modal/Wetube";
+import List from "../Modal/JsList";
+import Paint from "../Modal/JsPaint";
+import Chrome from "../Modal/JsChrome";
+import Kakao from "../Modal/Kakao";
 
+import portfolio from "./img/portfolio.png";
 import todayILearnedMariaDB from "./img/today_i_learned.png";
 import todayILearnedMongo from "./img/todayMongo.png";
 import movieApp from "./img/movieApp.png";
 import jsGame from "./img/jsgame.png";
 import nomflix from "./img/nomflix.png";
 import wetube from "./img/wetube.png";
+import paint from "./img/paint.png";
 import jsChrome from "./img/jsChrome.png";
 import jsList from "./img/jsList.png";
 import kakao from "./img/kakao.png";
@@ -79,24 +92,44 @@ const ProjectsContent = styled.div`
   text-align: center;
 `;
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
+// const customStyles = {
+//   content: {
+//     top: "50%",
+//     left: "50%",
+//     right: "auto",
+//     bottom: "auto",
+//     marginRight: "-50%",
+//     transform: "translate(-50%, -50%)",
+//   },
+// };
 
 Modal.setAppElement("#root");
 
 function Project() {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [PortfolioModal, setPortfolioModal] = useState(false);
+  const [Mongo, setMongo] = useState(false);
+  const [Maria, setMaria] = useState(false);
+  const [MovieAppModal, setMovieAppModal] = useState(false);
+  const [Carrot, setCarrot] = useState(false);
+  const [NomflixModal, setNomflixModal] = useState(false);
+  const [WetubeModal, setWetubeModal] = useState(false);
+  const [ListModal, setListModal] = useState(false);
+  const [PaintModal, setPaintModal] = useState(false);
+  const [ChromeModal, setChromeModal] = useState(false);
+  const [KakaoModal, setKakaoModal] = useState(false);
 
-  const openModal = () => {
-    setIsOpen(true);
+  const openModal = (title) => {
+    if (title === "Portfolio") setPortfolioModal(true);
+    if (title === "Mongo") setMongo(true);
+    if (title === "Maria") setMaria(true);
+    if (title === "MovieApp") setMovieAppModal(true);
+    if (title === "Carrot") setCarrot(true);
+    if (title === "Nomflix") setNomflixModal(true);
+    if (title === "Wetube") setWetubeModal(true);
+    if (title === "Paint") setPaintModal(true);
+    if (title === "Chrome") setChromeModal(true);
+    if (title === "List") setListModal(true);
+    if (title === "Kakao") setKakaoModal(true);
   };
 
   return (
@@ -116,7 +149,28 @@ function Project() {
           </Title>
         </TitleContainer>
         <ProjectContainer>
-          <Projects style={{ cursor: "pointer" }} onClick={TodayMongo}>
+          <Projects
+            style={{ cursor: "pointer" }}
+            onClick={() => openModal("Portfolio")}
+          >
+            <ProjectsTitle>
+              <h1>Portfolio</h1>
+            </ProjectsTitle>
+            <ProjectsImge>
+              <img
+                style={{ width: "100%", height: "170px" }}
+                alt="project01"
+                src={portfolio}
+              />
+            </ProjectsImge>
+            <ProjectsContent>
+              <h2>React를 사용하여 포트폴리오를 만듬.</h2>
+            </ProjectsContent>
+          </Projects>
+          <Projects
+            style={{ cursor: "pointer" }}
+            onClick={() => openModal("Mongo")}
+          >
             <ProjectsTitle>
               <h1>Today I Learned</h1>
             </ProjectsTitle>
@@ -128,10 +182,15 @@ function Project() {
               />
             </ProjectsImge>
             <ProjectsContent>
-              <h2>React와 Node JS 그리고 MongoDB를 사용하여 게시판을 만듬.</h2>
+              <h2>
+                React와 Redux, Node JS 그리고 MongoDB를 사용하여 게시판을 만듬.
+              </h2>
             </ProjectsContent>
           </Projects>
-          <Projects style={{ cursor: "pointer" }}>
+          <Projects
+            style={{ cursor: "pointer" }}
+            onClick={() => openModal("Maria")}
+          >
             <ProjectsTitle>
               <h1>Today I Learned</h1>
             </ProjectsTitle>
@@ -150,7 +209,10 @@ function Project() {
               <h2>paging기능을 추가함.</h2>
             </ProjectsContent>
           </Projects>
-          <Projects style={{ cursor: "pointer" }}>
+          <Projects
+            style={{ cursor: "pointer" }}
+            onClick={() => openModal("MovieApp")}
+          >
             <ProjectsTitle>
               <h1>Movie App</h1>
             </ProjectsTitle>
@@ -168,7 +230,10 @@ function Project() {
               </h2>
             </ProjectsContent>
           </Projects>
-          <Projects style={{ cursor: "pointer" }}>
+          <Projects
+            style={{ cursor: "pointer" }}
+            onClick={() => openModal("Carrot")}
+          >
             <ProjectsTitle>
               <h1>Carrot Game</h1>
             </ProjectsTitle>
@@ -183,7 +248,10 @@ function Project() {
               <h2>HTML, CSS, JavaScript를 사용하여 간단한 게임 구현.</h2>
             </ProjectsContent>
           </Projects>
-          <Projects style={{ cursor: "pointer" }}>
+          <Projects
+            style={{ cursor: "pointer" }}
+            onClick={() => openModal("Nomflix")}
+          >
             <ProjectsTitle>
               <h1>Nomflix</h1>
             </ProjectsTitle>
@@ -201,7 +269,10 @@ function Project() {
               </h2>
             </ProjectsContent>
           </Projects>
-          <Projects style={{ cursor: "pointer" }}>
+          <Projects
+            style={{ cursor: "pointer" }}
+            onClick={() => openModal("Wetube")}
+          >
             <ProjectsTitle>
               <h1>WeTube</h1>
             </ProjectsTitle>
@@ -219,25 +290,10 @@ function Project() {
               </h2>
             </ProjectsContent>
           </Projects>
-          <Projects style={{ cursor: "pointer" }}>
-            <ProjectsTitle>
-              <h1>JS-Chrome</h1>
-            </ProjectsTitle>
-            <ProjectsImge>
-              <img
-                style={{ width: "100%", height: "170px" }}
-                alt="project03"
-                src={jsChrome}
-              />
-            </ProjectsImge>
-            <ProjectsContent>
-              <h2>
-                JavaScript를 사용하여 현재 시간 구현과 TodoList, 날씨 정보를
-                화면에 보여줌.
-              </h2>
-            </ProjectsContent>
-          </Projects>
-          <Projects style={{ cursor: "pointer" }}>
+          <Projects
+            style={{ cursor: "pointer" }}
+            onClick={() => openModal("List")}
+          >
             <ProjectsTitle>
               <h1>Shopping Mall List</h1>
             </ProjectsTitle>
@@ -255,7 +311,50 @@ function Project() {
               </h2>
             </ProjectsContent>
           </Projects>
-          <Projects style={{ cursor: "pointer" }} onClick={openModal}>
+          <Projects
+            style={{ cursor: "pointer" }}
+            onClick={() => openModal("Paint")}
+          >
+            <ProjectsTitle>
+              <h1>Drawing Board</h1>
+            </ProjectsTitle>
+            <ProjectsImge>
+              <img
+                style={{ width: "100%", height: "170px" }}
+                alt="project03"
+                src={paint}
+              />
+            </ProjectsImge>
+            <ProjectsContent>
+              <h2>JavaScript의 Canvas기능을 사용하여 그림판을 만들어봄.</h2>
+            </ProjectsContent>
+          </Projects>
+          <Projects
+            style={{ cursor: "pointer" }}
+            onClick={() => openModal("Paint")}
+          >
+            <ProjectsTitle>
+              <h1>JS-Chrome</h1>
+            </ProjectsTitle>
+            <ProjectsImge>
+              <img
+                style={{ width: "100%", height: "170px" }}
+                alt="project03"
+                src={jsChrome}
+              />
+            </ProjectsImge>
+            <ProjectsContent>
+              <h2>
+                JavaScript를 사용하여 현재 시간 구현과 TodoList, 날씨 정보를
+                화면에 보여줌.
+              </h2>
+            </ProjectsContent>
+          </Projects>
+
+          <Projects
+            style={{ cursor: "pointer" }}
+            onClick={() => openModal("Kakao")}
+          >
             <ProjectsTitle>
               <h1>카카오톡</h1>
             </ProjectsTitle>
@@ -275,11 +374,40 @@ function Project() {
           </Projects>
         </ProjectContainer>
       </ProjectForm>
-      <div>
-        <Modal isOpen={modalIsOpen} style={customStyles}>
-          <TodayMongo setIsOpen={setIsOpen} />
-        </Modal>
-      </div>
+
+      <Modal className="Modal" isOpen={PortfolioModal}>
+        <Portfolio setPortfolioModal={setPortfolioModal} />
+      </Modal>
+      <Modal className="Modal" isOpen={Mongo}>
+        <TodayMongo setMongo={setMongo} />
+      </Modal>
+      <Modal className="Modal" isOpen={Maria}>
+        <TodayMaria setMaria={setMaria} />
+      </Modal>
+      <Modal className="Modal" isOpen={MovieAppModal}>
+        <MovieApp setMovieAppModal={setMovieAppModal} />
+      </Modal>
+      <Modal className="Modal" isOpen={Carrot}>
+        <CarrotGame setCarrot={setCarrot} />
+      </Modal>
+      <Modal className="Modal" isOpen={NomflixModal}>
+        <Nomflix setNomflixModal={setNomflixModal} />
+      </Modal>
+      <Modal className="Modal" isOpen={WetubeModal}>
+        <Wetube setWetubeModal={setWetubeModal} />
+      </Modal>
+      <Modal className="Modal" isOpen={ListModal}>
+        <List setListModal={setListModal} />
+      </Modal>
+      <Modal className="Modal" isOpen={PaintModal}>
+        <Paint setPaintModal={setPaintModal} />
+      </Modal>
+      <Modal className="Modal" isOpen={ChromeModal}>
+        <Chrome setChromeModal={setChromeModal} />
+      </Modal>
+      <Modal className="Modal" isOpen={KakaoModal}>
+        <Kakao setKakaoModal={setKakaoModal} />
+      </Modal>
     </Article>
   );
 }
