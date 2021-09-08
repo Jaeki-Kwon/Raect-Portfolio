@@ -25,6 +25,7 @@ function JsChrome({ setChromeModal }) {
               return (
                 // eslint-disable-next-line jsx-a11y/alt-text
                 <img
+                  style={{ cursor: "pointer" }}
                   src={imgs}
                   key={num}
                   onClick={() => {

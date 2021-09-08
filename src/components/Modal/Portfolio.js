@@ -26,6 +26,7 @@ function Portfolio({ setPortfolioModal }) {
               return (
                 // eslint-disable-next-line jsx-a11y/alt-text
                 <img
+                  style={{ cursor: "pointer" }}
                   src={imgs}
                   key={num}
                   onClick={() => {
@@ -49,6 +50,7 @@ function Portfolio({ setPortfolioModal }) {
                 <a href="https://jaekiportfolio.herokuapp.com/">여기서</a>{" "}
                 확인하기
               </li>
+              <li>Heroku를 사용하여 배포하였음.</li>
             </p>
           </div>
         </div>
