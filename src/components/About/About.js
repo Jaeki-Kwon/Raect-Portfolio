@@ -28,6 +28,7 @@ const TitleIcon = styled.div`
 `;
 
 const Title = styled.div`
+  width: 100%;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
