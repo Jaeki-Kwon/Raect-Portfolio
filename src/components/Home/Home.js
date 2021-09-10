@@ -9,6 +9,7 @@ const Main = styled.div`
   min-height: 100vh; */
   width: 100%;
   height: 100vh;
+  /* margin-top: -20px; */
   padding-top: 70px;
   display: flex;
   justify-content: center;

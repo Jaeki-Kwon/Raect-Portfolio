@@ -8,9 +8,10 @@ const Article = styled.article`
   align-items: center;
 `;
 const AboutForm = styled.div`
+  width: 100%;
   max-width: 71.25rem;
   padding: 4rem 2rem;
-  width: 70%;
+  margin: 0 auto;
 `;
 
 const TitleContainer = styled.div`
@@ -35,15 +36,28 @@ const Title = styled.div`
 const AboutContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
   margin-left: 30px;
+
+  @media screen and (max-width: 500px) {
+    flex-flow: column wrap;
+    align-items: center;
+  }
 `;
 
 const AboutInfoWrap = styled.div`
   width: 33.33%;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 const AboutInfo = styled.div`
   display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  max-width: 17rem;
+  margin: 0 auto;
 `;
 
 const AboutIcon = styled.div`
