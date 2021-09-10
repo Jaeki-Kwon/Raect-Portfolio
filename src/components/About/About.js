@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+
+import $ from "jquery";
 
 const Article = styled.article`
   width: 100%;
@@ -73,7 +75,7 @@ const AboutField = styled.div``;
 
 const About = () => {
   return (
-    <Article>
+    <Article id="aboutHeight">
       <AboutForm>
         <TitleContainer>
           <TitleIcon>

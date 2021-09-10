@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import "./NavBar.css";
+import $ from "jquery";
 
 const Menu = styled.nav`
   position: fixed;
@@ -79,7 +80,7 @@ const Item = styled.li`
   }
 `;
 
-function Nav() {
+function Nav(props) {
   const [ScrollY, setScrollY] = useState(0);
 
   const handleLogo = () => {
@@ -100,45 +101,53 @@ function Nav() {
   };
 
   const handleAbout = () => {
-    window.scrollTo({
-      top: 800,
-      behavior: "smooth",
-    });
-    setScrollY(800);
-    setisToggled(!isToggled);
+    if (matchMedia("screen and (max-width: 500px)").matches) {
+      window.scrollTo({
+        top: $("#aboutHeight").offset().top,
+        behavior: "smooth",
+      });
+      setScrollY($("#aboutHeight").offset().top);
+      setisToggled(!isToggled);
+    } else {
+      window.scrollTo({
+        top: $("#aboutHeight").offset().top,
+        behavior: "smooth",
+      });
+      setScrollY($("#aboutHeight").offset().top);
+    }
   };
 
   const handleSkill = () => {
     if (matchMedia("screen and (max-width: 500px)").matches) {
       window.scrollTo({
-        top: 1750,
+        top: $("#skillHeight").offset().top,
         behavior: "smooth",
       });
-      setScrollY(1750);
+      setScrollY($("#skillHeight").offset().top);
       setisToggled(!isToggled);
     } else {
       window.scrollTo({
-        top: 1500,
+        top: $("#skillHeight").offset().top,
         behavior: "smooth",
       });
-      setScrollY(1500);
+      setScrollY($("#skillHeight").offset().top);
     }
   };
 
   const handleProject = () => {
     if (matchMedia("screen and (max-width: 500px)").matches) {
       window.scrollTo({
-        top: 5150,
+        top: $("#projectHeight").offset().top,
         behavior: "smooth",
       });
-      setScrollY(5150);
+      setScrollY($("#projectHeight").offset().top);
       setisToggled(!isToggled);
     } else {
       window.scrollTo({
-        top: 3700,
+        top: $("#projectHeight").offset().top,
         behavior: "smooth",
       });
-      setScrollY(3700);
+      setScrollY($("#projectHeight").offset().top);
     }
   };
 
@@ -158,8 +167,12 @@ function Nav() {
         <MenuContainer>
           <WebItem>
             <Item onClick={handleHome}>Home</Item>
-            <Item onClick={handleAbout}>About</Item>
-            <Item onClick={handleSkill}>Skill</Item>
+            <Item id="AboutBtn" onClick={handleAbout}>
+              About
+            </Item>
+            <Item id="SkillBtn" onClick={handleSkill}>
+              Skill
+            </Item>
             <Item onClick={handleProject}>Project</Item>
           </WebItem>
           <MobileItem>

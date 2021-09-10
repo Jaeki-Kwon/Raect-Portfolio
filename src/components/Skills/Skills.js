@@ -67,7 +67,7 @@ const SkillImg = styled.div`
 
 function Skill() {
   return (
-    <Article>
+    <Article id="skillHeight">
       <SkillForm>
         <TitleContainer>
           <TitleIcon>
