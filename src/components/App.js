@@ -7,13 +7,8 @@ import About from "./About/About";
 import Skill from "./Skills/Skills";
 import Project from "./Project/Project";
 import Footer from "./Footer/Footer";
-import $ from "jquery";
 
 function App() {
-  $(document).ready(function () {
-    $("#aboutHeight").offset();
-  });
-
   return (
     <BrowserRouter>
       <NavBar />

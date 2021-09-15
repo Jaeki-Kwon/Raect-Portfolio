@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import test from "./img/test.jpg";
 
 const Article = styled.article`
   width: 100%;
@@ -173,10 +174,10 @@ function Skill() {
             </SkillTitle>
             <SkillImg>
               <img
-                style={{ width: "100%", height: "170px" }}
+                style={{ width: "100%", height: "300px" }}
                 className="skillImg"
                 alt="skill_10"
-                src="https://cdg-portfolio.com/images/skills/certificate.jpg"
+                src={test}
               />
             </SkillImg>
           </Skills>
