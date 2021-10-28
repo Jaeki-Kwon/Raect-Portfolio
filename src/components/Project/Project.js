@@ -164,7 +164,7 @@ function Project() {
               />
             </ProjectsImge>
             <ProjectsContent>
-              <h2>React를 사용하여 포트폴리오를 만듬.</h2>
+              <h2>React와 미디어쿼리를 사용하여 반응형 포트폴리오를 만듬.</h2>
             </ProjectsContent>
           </Projects>
           <Projects
@@ -331,7 +331,7 @@ function Project() {
           </Projects>
           <Projects
             style={{ cursor: "pointer" }}
-            onClick={() => openModal("Paint")}
+            onClick={() => openModal("Chrome")}
           >
             <ProjectsTitle>
               <h1>JS-Chrome</h1>

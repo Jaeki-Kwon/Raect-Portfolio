@@ -2,7 +2,7 @@ import React from "react";
 import "../Modal/Modal.css";
 import image1 from "./img/Maria/Maria1.png";
 import image2 from "./img/Maria/Maria2.png";
-import image3 from "./img/Maria/Maria3.png";
+import image3 from "./img/Maria/Maria3.jpg";
 import image4 from "./img/Maria/Maria4.png";
 import image5 from "./img/Maria/Maria5.png";
 import image6 from "./img/Maria/Maria6.png";

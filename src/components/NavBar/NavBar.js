@@ -48,10 +48,6 @@ const Logo = styled.div`
 
 const MenuContainer = styled.div``;
 
-const RightMenu = styled.ul`
-  display: flex;
-`;
-
 const MobileItem = styled.div`
   margin-right: 25px;
   @media screen and (min-width: 550px) {

@@ -2,7 +2,7 @@ import React from "react";
 import "../Modal/Modal.css";
 import image1 from "./img/Mongo/Mongo1.png";
 import image2 from "./img/Mongo/Mongo2.png";
-import image3 from "./img/Mongo/Mongo3.png";
+import image3 from "./img/Mongo/Mongo3.jpg";
 import image4 from "./img/Mongo/Mongo4.png";
 import image5 from "./img/Mongo/Mongo5.png";
 import image6 from "./img/Mongo/Mongo6.png";
