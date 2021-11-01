@@ -2,7 +2,7 @@
 
 - [x] 포트폴리오 완성하기
 - [x] Heroku사용하여 배포하기
-- [ ] 반응형으로 만들기
+- [x] 반응형으로 만들기
 - [ ] 코드 리팩토링하기
 
 ## URL : https://jaekiportfolio.herokuapp.com/
